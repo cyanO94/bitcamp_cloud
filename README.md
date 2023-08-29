@@ -7,4 +7,4 @@ git bash
 3. git branch
 4. git add . 또는 git add \[파일명\] - 해당 파일들을 로컬 저장소에 추가
 5. git commit -m "메세지" - 해당 메세지와 함께 위의 파일들을 로컬 저장소에 커밋
-6. git push origin main - 원격저장소의 master 브랜치에 소스 업로드
+6. git push origin main - 원격저장소의 main 브랜치에 소스 업로드

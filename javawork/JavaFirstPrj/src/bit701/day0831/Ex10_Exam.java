@@ -31,7 +31,7 @@ public class Ex10_Exam {
 		
 		NumberFormat numFormat = NumberFormat.getInstance();
 		
-		System.out.println("총금액 : " + numFormat.format(price* cnt));
+		System.out.println("총금액 : " + numFormat.format(price* cnt) + "원");
 		if (cnt > 4) {
 			System.out.println("10프로 할인된 금액 : " + numFormat.format((int)(price * cnt* 0.9)) + "원");
 		}

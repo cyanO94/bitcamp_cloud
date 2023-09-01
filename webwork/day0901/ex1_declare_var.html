@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 선언</title>
+</head>
+<body>
+    <script>
+        // ES6 : ECMA에서 2015년에 채택된 자바 스크립트 표준
+        /*
+            ES6에서 추가된 기능들
+            1. 블록 범위 번수, let, const
+            2. 함수에서 기본 매개 변수 
+            3. 탬플릿 리터럴 (Multiline Literal)
+            4. 화살표 함수
+            5. 클래스, 상속
+            6. 모듈
+        */
+
+
+        // var, let test
+        var a = 10;
+        document.write(`<h3>a=${a}</h3>`);      // 10
+        if (true) {
+            var a = 20; // 상위 블록의 a 변수에 덮어써짐
+            document.write(`<h3>a=${a}</h3>`);  // 20
+        }
+        document.write(`<h3>a=${a}</h3><hr/>`);      // 20
+
+
+        let b = 10;
+        document.write(`<h3>b=${b}</h3>`);      // 10
+        if (true) {
+            let b = 20; 
+            document.write(`<h3>b=${b}</h3>`);  // 20
+        }
+        document.write(`<h3>b=${b}</h3>`);      // 10
+
+        let s1 = "Hello";
+        const MSG = "Happy Day";
+        document.write(`<h3>s1=${s1}</h3>`);
+        document.write(`<h3>MSG=${MSG}</h3>`);
+
+        s1 = "안녕하세요";
+        //MSG = "반가워요";
+        document.write(`<h3>s1=${s1}</h3>`);
+        document.write(`<h3>MSG=${MSG}</h3>`);
+
+
+    </script>
+</body>
+</html>

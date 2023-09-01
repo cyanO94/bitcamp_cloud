@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR">
+    <title>Document</title>
+    <style>
+        span {
+            font-family: "IBM Plex Sans KR" ;
+        }
+        .one {
+            font-family: "IBM Plex Sans KR" ;
+        }
+        .two {
+            font-size : 30px;
+        }
+        div.three {
+            background-color: antiquewhite;
+        }
+
+        /* div 테그 중 class one, three 인 경우만 border 적용*/
+        div.one, div.three {
+            border: 5px solid deeppink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 스타일 정의 : 테그 삽입형 -->
+    <h1 style="color:blueviolet;font-family: '궁서체';">오늘 날씨 좋음</h1>
+    <h1 style="color:rgb(255, 170, 0);background-color: rgba(0, 0, 255, 0.3);font-family: IBM Plex Sans KR;">whether good</h1>
+    <span class="one">JavaScript</span>
+    <span class="two">HTML</span>
+    <span class="three">Java</span>
+    <hr />
+    <div class="one">소나타</div>
+    <div class="two">그랜져</div>
+    <div class="three">밴츠</div>
+</body>
+</html>

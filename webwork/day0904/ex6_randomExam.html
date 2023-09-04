@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value ="난수발생기" id="btnRnd" />
+    <br />
+    <input type="input" id="myInput" />
+    <input type="button" value = "OK" id="okButton" />
+
+    <div id="output"> </div>
+    <script>
+        let rnd;
+        let check = false;
+        let input_val;
+        let rnd2;
+
+        document.getElementById("btnRnd").onclick=function() {
+            rnd = parseInt(Math.random()*100) + 1;
+            check = true;
+            console.log(rnd);
+        };
+        document.getElementById("okButton").onclick=function() {
+            let output_div = document.getElementById("output")
+            if (!check) {
+                output_div.innerHTML += "난수 발생기를 누르세요<br>";
+            }
+            else {
+                input_val = parseInt(document.getElementById("myInput").value);
+                console.log(input_val);
+                if (input_val > rnd) {
+                    output_div.innerHTML += `${input_val} 이 더 큽니다<br>`;
+                }
+                else if (input_val < rnd) {
+                    output_div.innerHTML += `${input_val}  이 더 작습니다<br>`;
+                }
+                else {
+                    rnd2 = parseInt(Math.random()*15) + 1;
+                    output_div.innerHTML += `<img src="../res/photo/${rnd2}.jpg">`
+                }
+            }   
+        };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.box {
+            float:left;
+            border-radius: 100px;
+            margin-right: 20px;
+            text-align: center;
+            font-size: 30px;
+            background-color: blueviolet;
+            padding:10px;
+            width: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            
+            let boxs = document.querySelectorAll("div.box");
+            let nums = new Array();
+
+            let date = new Date();
+
+            let found = true;
+            for (let i = 0; i < boxs.length; i++) {
+                found = true;
+                let num = parseInt(Math.random()*45 +1); // (0 ~ 44) + 1
+                for (let j = 0; j < nums.length; j++) {
+                    if (num == nums[j]) {
+                        found = false;
+                    }
+                }
+
+                if (!found) i -= 1;
+                else nums.push(num);
+            }
+
+            for (let i = 0; i < boxs.length; i++) {
+                boxs[i].innerHTML = nums[i];
+            }
+        }
+    </script>
+
+    
+    <br>
+    <div style='background-color: red;width:700px;height:200px;'>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <br><br><br><br><br>
+    <div style="text-align: center;">
+    <button >로또 숫자 구하기</button>
+    </div>
+    </div>
+</body>
+</html>
